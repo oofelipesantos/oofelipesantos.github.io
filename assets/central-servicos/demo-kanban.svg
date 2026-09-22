@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Quadro Kanban demonstrativo</title><desc id="desc">Quadro fictício da Empresa Demonstração, sem dados da produção.</desc>
+  <defs><style>.h{font:700 20px Arial,sans-serif;fill:#e8f0ff}.t{font:14px Arial,sans-serif;fill:#95a7c4}.m{font:12px monospace;fill:#60a5fa}.col{fill:#0d1828;stroke:#223a5c;stroke-width:2}.card{fill:#142238;stroke:#2a4770;stroke-width:2}.tag{font:11px monospace;fill:#bfdbfe}</style></defs>
+  <rect width="1200" height="720" rx="24" fill="#07101d"/><rect width="1200" height="70" rx="24" fill="#173d77"/><rect y="48" width="1200" height="22" fill="#173d77"/>
+  <text x="38" y="43" font-family="Arial" font-size="22" font-weight="700" fill="white">Empresa Demonstração</text><text x="930" y="42" font-family="monospace" font-size="13" fill="white">QUADRO FICTÍCIO</text>
+  <text x="42" y="120" class="m">PROJETO DEMONSTRAÇÃO</text><text x="42" y="154" class="h">Evolução do portal interno</text><text x="918" y="142" class="t">Nenhum dado de produção</text>
+  <g>
+    <rect x="40" y="185" width="260" height="485" rx="16" class="col"/><text x="62" y="221" class="m">BACKLOG</text><text x="252" y="221" class="t">2</text>
+    <rect x="62" y="246" width="216" height="120" rx="12" class="card"/><text x="80" y="274" class="tag">TSK-DEMO-010</text><text x="80" y="305" class="t">Revisar filtros</text><text x="80" y="331" class="t">da consulta fictícia</text>
+    <rect x="62" y="386" width="216" height="120" rx="12" class="card"/><text x="80" y="414" class="tag">TSK-DEMO-011</text><text x="80" y="445" class="t">Documentar fluxo</text><text x="80" y="471" class="t">de homologação</text>
+
+    <rect x="325" y="185" width="260" height="485" rx="16" class="col"/><text x="347" y="221" class="m">EM EXECUÇÃO</text><text x="537" y="221" class="t">1</text>
+    <rect x="347" y="246" width="216" height="146" rx="12" class="card"/><text x="365" y="274" class="tag">TSK-DEMO-012</text><text x="365" y="305" class="t">Validar regra de</text><text x="365" y="331" class="t">calendário comercial</text><rect x="365" y="350" width="132" height="24" rx="12" fill="#173d77"/><text x="381" y="366" class="tag">TÉCNICO DEMO</text>
+
+    <rect x="610" y="185" width="260" height="485" rx="16" class="col"/><text x="632" y="221" class="m">EM VALIDAÇÃO</text><text x="822" y="221" class="t">1</text>
+    <rect x="632" y="246" width="216" height="120" rx="12" class="card"/><text x="650" y="274" class="tag">TSK-DEMO-013</text><text x="650" y="305" class="t">Testar exportação</text><text x="650" y="331" class="t">de relatório sintético</text>
+
+    <rect x="895" y="185" width="260" height="485" rx="16" class="col"/><text x="917" y="221" class="m">CONCLUÍDO</text><text x="1107" y="221" class="t">1</text>
+    <rect x="917" y="246" width="216" height="120" rx="12" class="card"/><text x="935" y="274" class="tag">TSK-DEMO-014</text><text x="935" y="305" class="t">Ajustar mensagem</text><text x="935" y="331" class="t">da tela demonstrativa</text>
+  </g>
+</svg>

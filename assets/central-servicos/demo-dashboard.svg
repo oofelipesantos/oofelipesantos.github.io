@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Dashboard demonstrativo da Central de Serviços</title>
+  <desc id="desc">Composição fictícia e anonimizada identificada como Empresa Demonstração.</desc>
+  <defs><linearGradient id="top" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient><style>.h{font:700 18px Arial,sans-serif;fill:#e8f0ff}.t{font:14px Arial,sans-serif;fill:#95a7c4}.n{font:700 34px Arial,sans-serif;fill:#e8f0ff}.m{font:12px monospace;fill:#60a5fa}.card{fill:#111c2e;stroke:#243c60;stroke-width:2}.row{fill:#0c1727;stroke:#1c304c}.chip{font:11px monospace;fill:#bfdbfe}</style></defs>
+  <rect width="1200" height="720" rx="24" fill="#07101d"/>
+  <rect width="1200" height="70" rx="24" fill="url(#top)"/><rect y="48" width="1200" height="22" fill="url(#top)"/>
+  <text x="38" y="43" font-family="Arial" font-size="22" font-weight="700" fill="white">Empresa Demonstração</text>
+  <text x="918" y="42" font-family="monospace" font-size="13" fill="white">AMBIENTE FICTÍCIO</text>
+  <rect x="0" y="70" width="220" height="650" fill="#0a1423"/>
+  <text x="30" y="117" class="m">CENTRAL DE SERVIÇOS</text>
+  <g class="t"><text x="32" y="165">Visão geral</text><text x="32" y="210">Chamados</text><text x="32" y="255">Tarefas</text><text x="32" y="300">Quadros</text><text x="32" y="345">Relatórios</text><text x="32" y="390">Administração</text></g>
+  <rect x="20" y="135" width="180" height="48" rx="10" fill="#14294a"/><rect x="20" y="431" width="180" height="72" rx="10" fill="#0f1e32" stroke="#203859"/>
+  <text x="36" y="459" class="m">DEMONSTRAÇÃO</text><text x="36" y="484" class="t">Dados totalmente fictícios</text>
+
+  <text x="260" y="118" class="h">Resumo operacional</text><text x="260" y="143" class="t">Visão da equipe · dados sintéticos</text>
+  <g>
+    <rect x="260" y="172" width="205" height="118" rx="14" class="card"/><text x="282" y="205" class="m">NOVOS</text><text x="282" y="254" class="n">—</text><text x="330" y="253" class="t">sem métrica pública</text>
+    <rect x="485" y="172" width="205" height="118" rx="14" class="card"/><text x="507" y="205" class="m">EM ATENDIMENTO</text><text x="507" y="254" class="n">—</text><text x="555" y="253" class="t">dados omitidos</text>
+    <rect x="710" y="172" width="205" height="118" rx="14" class="card"/><text x="732" y="205" class="m">AGUARDANDO</text><text x="732" y="254" class="n">—</text><text x="780" y="253" class="t">dados omitidos</text>
+    <rect x="935" y="172" width="205" height="118" rx="14" class="card"/><text x="957" y="205" class="m">SLA</text><text x="957" y="254" class="n">—</text><text x="1005" y="253" class="t">sem resultado inventado</text>
+  </g>
+  <rect x="260" y="320" width="560" height="344" rx="16" class="card"/><text x="286" y="358" class="h">Fila de trabalho demonstrativa</text>
+  <g><rect x="282" y="383" width="516" height="62" rx="10" class="row"/><text x="300" y="410" class="m">CHM-DEMO-001</text><text x="300" y="432" class="t">Falha fictícia ao gerar relatório</text><text x="686" y="417" class="chip">EM ATENDIMENTO</text>
+  <rect x="282" y="459" width="516" height="62" rx="10" class="row"/><text x="300" y="486" class="m">CHM-DEMO-002</text><text x="300" y="508" class="t">Acesso ao ambiente de homologação</text><text x="704" y="493" class="chip">TRIAGEM</text>
+  <rect x="282" y="535" width="516" height="62" rx="10" class="row"/><text x="300" y="562" class="m">TSK-DEMO-003</text><text x="300" y="584" class="t">Revisar rotina fictícia de backup</text><text x="682" y="569" class="chip">EM EXECUÇÃO</text></g>
+  <rect x="844" y="320" width="296" height="344" rx="16" class="card"/><text x="870" y="358" class="h">SLA e operação</text>
+  <text x="870" y="398" class="m">CALENDÁRIO COMERCIAL</text><text x="870" y="425" class="t">horários e feriados configuráveis</text>
+  <text x="870" y="474" class="m">PAUSAS CONTROLADAS</text><text x="870" y="501" class="t">espera e bloqueios rastreados</text>
+  <text x="870" y="550" class="m">AUDITORIA</text><text x="870" y="577" class="t">ações e mudanças relevantes</text>
+  <text x="870" y="626" class="m">VERSÃO 1.7.5</text>
+</svg>

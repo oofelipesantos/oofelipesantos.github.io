@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Modelo de dados simplificado</title>
+  <desc id="desc">Relacionamentos conceituais entre usuários, chamados, tarefas, apontamentos, comentários, anexos e auditoria.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08111f"/><stop offset="1" stop-color="#101b2e"/></linearGradient>
+    <style>
+      .t{font:700 32px Arial,sans-serif;fill:#e8f0ff}.s{font:16px Arial,sans-serif;fill:#91a4c2}.h{font:700 17px monospace;fill:#e8f0ff}.f{font:13px monospace;fill:#91a4c2}.box{fill:#111c2e;stroke:#2a4770;stroke-width:2}.core{fill:#122644;stroke:#3b82f6;stroke-width:2}.line{fill:none;stroke:#4c6f9c;stroke-width:2}.card{font:13px monospace;fill:#60a5fa}
+    </style>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg2)"/>
+  <text x="58" y="68" class="t">Modelo de dados simplificado</text>
+  <text x="58" y="99" class="s">Visão conceitual do núcleo transacional · nomes e registros de produção não são exibidos</text>
+
+  <g class="line">
+    <path d="M260 230H390"/><path d="M570 230H690"/><path d="M870 230H990"/>
+    <path d="M480 290V390"/><path d="M780 290V390"/><path d="M1080 290V390"/>
+    <path d="M260 500H390"/><path d="M570 500H690"/><path d="M870 500H990"/>
+    <path d="M170 290V390"/>
+  </g>
+
+  <g>
+    <rect x="80" y="170" width="180" height="120" rx="14" class="box"/>
+    <text x="104" y="205" class="h">USERS</text><text x="104" y="233" class="f">perfil · estado</text><text x="104" y="258" class="f">setor</text>
+    <text x="272" y="220" class="card">1:N</text>
+
+    <rect x="390" y="150" width="180" height="140" rx="14" class="core"/>
+    <text x="414" y="185" class="h">TICKETS</text><text x="414" y="213" class="f">status · prioridade</text><text x="414" y="238" class="f">SLA · solução</text><text x="414" y="263" class="f">@Version</text>
+    <text x="582" y="220" class="card">1:N</text>
+
+    <rect x="690" y="150" width="180" height="140" rx="14" class="core"/>
+    <text x="714" y="185" class="h">TASKS</text><text x="714" y="213" class="f">hierarquia · WIP</text><text x="714" y="238" class="f">responsável</text><text x="714" y="263" class="f">@Version</text>
+    <text x="882" y="220" class="card">1:N</text>
+
+    <rect x="990" y="170" width="180" height="120" rx="14" class="box"/>
+    <text x="1014" y="205" class="h">TIME_ENTRIES</text><text x="1014" y="233" class="f">tempo · usuário</text><text x="1014" y="258" class="f">origem automática</text>
+
+    <rect x="80" y="390" width="180" height="120" rx="14" class="box"/>
+    <text x="104" y="425" class="h">ACTIVITY_LOGS</text><text x="104" y="453" class="f">ação · alteração</text><text x="104" y="478" class="f">contexto</text>
+
+    <rect x="390" y="390" width="180" height="120" rx="14" class="box"/>
+    <text x="414" y="425" class="h">COMMENTS</text><text x="414" y="453" class="f">público · interno</text><text x="414" y="478" class="f">chamado ou tarefa</text>
+    <text x="582" y="490" class="card">1:N</text>
+
+    <rect x="690" y="390" width="180" height="120" rx="14" class="box"/>
+    <text x="714" y="425" class="h">ATTACHMENTS</text><text x="714" y="453" class="f">path · MIME</text><text x="714" y="478" class="f">SHA-256</text>
+    <text x="882" y="490" class="card">N:1</text>
+
+    <rect x="990" y="390" width="180" height="120" rx="14" class="box"/>
+    <text x="1014" y="425" class="h">PROJECT_COLUMNS</text><text x="1014" y="453" class="f">quadro · ordem</text><text x="1014" y="478" class="f">status associado</text>
+  </g>
+
+  <rect x="58" y="594" width="1084" height="70" rx="16" fill="#0d1727" stroke="#1e3554" stroke-width="2"/>
+  <text x="84" y="623" class="s">O esquema completo também inclui catálogos, políticas e feriados de SLA, notificações, sequências, configurações e preferências.</text>
+  <text x="84" y="649" class="s">O desenho resume relações importantes; as migrations Flyway são a fonte técnica do modelo.</text>
+</svg>

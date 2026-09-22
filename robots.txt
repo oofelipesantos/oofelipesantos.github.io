@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ofelipesantos.com.br/sitemap.xml

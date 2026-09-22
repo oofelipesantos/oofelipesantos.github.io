@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudo de caso: Central de Serviços de TI em Java 21, Spring Boot e SQL Server, em produção e com usuários reais.">
+  <title>Central de Serviços de TI · Estudo de caso</title>
+  <link rel="canonical" href="https://ofelipesantos.com.br/central-servicos-ti.html">
+  <meta property="og:title" content="Central de Serviços de TI · Estudo de caso">
+  <meta property="og:description" content="Java 21, Spring Boot, SQL Server, segurança, SLA, testes e implantação.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ofelipesantos.com.br/central-servicos-ti.html">
+  <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="projetos">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <header class="topnav">
+    <a href="index.html" class="nav-brand mono" aria-label="Página inicial">FS<span class="brand-dot">.</span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
+      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
+      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> serviços</a></li>
+      <li><a href="contato.html" class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status"><span class="status-dot"></span><span class="mono">disponível</span></div>
+      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header"><span class="nav-brand mono">FS<span class="brand-dot">.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
+    <ul class="mobile-nav-menu">
+      <li><a href="index.html" class="mobile-nav-link" data-page="home">01. início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. serviços</a></li>
+      <li><a href="contato.html" class="mobile-nav-link" data-page="contato">04. contato</a></li>
+    </ul>
+    <div class="mobile-nav-footer"><span class="status-dot"></span> disponível</div>
+  </nav>
+
+  <main class="main case-page">
+    <section class="case-hero section">
+      <div class="container">
+        <a href="projetos.html" class="case-back mono"><i class="fas fa-arrow-left"></i> voltar para projetos</a>
+        <div class="case-hero-grid">
+          <div class="fade-up">
+            <div class="case-kicker mono"><span class="status-dot"></span> sistema em produção · versão 1.7.5</div>
+            <h1 class="case-title head">Central de<br><span>Serviços de TI</span></h1>
+            <p class="case-lead">Uma aplicação Java/Spring para organizar chamados, tarefas, SLA e operação — do formulário inicial ao histórico auditável e à implantação no Windows.</p>
+            <div class="case-actions">
+              <a href="#decisoes" class="btn-primary">Ver decisões técnicas <i class="fas fa-arrow-down"></i></a>
+              <a href="docs/central-servicos/README.md" class="btn-ghost">README técnico</a>
+            </div>
+          </div>
+          <aside class="case-facts fade-up delay-1">
+            <div class="case-fact"><span class="mono">papel</span><strong>desenvolvimento e implantação</strong></div>
+            <div class="case-fact"><span class="mono">backend</span><strong>Java 21 · Spring Boot</strong></div>
+            <div class="case-fact"><span class="mono">dados</span><strong>SQL Server · JPA · Flyway</strong></div>
+            <div class="case-fact"><span class="mono">operação</span><strong>Docker · Apache · PowerShell</strong></div>
+            <div class="case-fact"><span class="mono">contexto</span><strong>uso real, dados preservados</strong></div>
+          </aside>
+        </div>
+        <div class="case-note fade-up"><i class="fas fa-shield-halved"></i><p>Este estudo não expõe a empresa nem dados operacionais. Todas as telas abaixo são composições fictícias com a identidade <strong>Empresa Demonstração</strong>.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contexto">
+      <div class="container case-narrow">
+        <div class="section-header">
+          <span class="sh-num mono">// contexto</span>
+          <h2 class="sh-title head">O problema não era só abrir chamados</h2>
+        </div>
+        <div class="case-copy fade-up">
+          <p>Uma solicitação de TI precisa conservar contexto durante todo o atendimento: quem pediu, o que já foi tentado, qual é o próximo passo, quem assumiu a execução e como o prazo foi calculado. Quando essas informações ficam espalhadas, a equipe perde rastreabilidade e o solicitante perde visibilidade.</p>
+          <p>A solução centraliza esse ciclo sem misturar o que é público com o trabalho interno da equipe. O mesmo sistema atende usuários autenticados, abertura sem conta, triagem, execução técnica, gestão de catálogos e operação administrativa.</p>
+        </div>
+        <div class="case-problem-grid">
+          <article class="case-card fade-up"><span class="case-card-num mono">01</span><h3>Solicitante</h3><p>Abre, acompanha e responde sem acessar notas internas ou tarefas da equipe.</p></article>
+          <article class="case-card fade-up delay-1"><span class="case-card-num mono">02</span><h3>Equipe técnica</h3><p>Faz triagem, assume trabalho, divide tarefas, registra tempo e controla prioridades.</p></article>
+          <article class="case-card fade-up delay-2"><span class="case-card-num mono">03</span><h3>Administração</h3><p>Configura perfis, catálogos, SLA, retenção, armazenamento e auditoria.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arquitetura">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// arquitetura</span>
+          <h2 class="sh-title head">Monólito modular, operação simples</h2>
+          <p class="sh-desc">A escolha prioriza transações locais, implantação reproduzível e menos pontos de falha para o contexto atual.</p>
+        </div>
+        <figure class="case-visual fade-up"><img src="assets/central-servicos/arquitetura.svg" alt="Diagrama de arquitetura com navegador, Apache, Spring Boot, SQL Server, anexos e logs"><figcaption>Topologia pública simplificada. Nenhum endereço do ambiente real é exibido.</figcaption></figure>
+        <div class="case-layer-grid">
+          <article class="case-layer"><span class="mono">HTTP</span><h3>Controllers</h3><p>Rotas, formulários e respostas HTML, JSON e CSV.</p></article>
+          <article class="case-layer"><span class="mono">DOMÍNIO</span><h3>Services</h3><p>Transações, autorização, workflow, SLA e auditoria.</p></article>
+          <article class="case-layer"><span class="mono">DADOS</span><h3>Repositories</h3><p>JPA, specifications, locks e consultas específicas.</p></article>
+          <article class="case-layer"><span class="mono">SCHEMA</span><h3>Flyway</h3><p>Evolução versionada de tabelas, constraints e índices.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="decisoes">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// decisões técnicas</span>
+          <h2 class="sh-title head">O que torna o projeto relevante para backend</h2>
+        </div>
+        <div class="decision-list">
+          <article class="decision-item fade-up"><div class="decision-icon"><i class="fas fa-code-branch"></i></div><div><span class="mono">CONSISTÊNCIA</span><h3>Concorrência tratada de forma explícita</h3><p>A numeração anual usa bloqueio transacional no SQL Server. A tomada de tarefa livre usa atualização condicional. Chamados e tarefas usam versionamento otimista para não aceitar sobrescritas silenciosas.</p></div></article>
+          <article class="decision-item fade-up"><div class="decision-icon"><i class="fas fa-clock"></i></div><div><span class="mono">REGRA DE DOMÍNIO</span><h3>SLA calculado em tempo útil</h3><p>Primeira resposta e resolução consideram expediente configurável, fins de semana, feriados e pausas controladas. O tempo aguardando o solicitante é acompanhado separadamente.</p></div></article>
+          <article class="decision-item fade-up"><div class="decision-icon"><i class="fas fa-lock"></i></div><div><span class="mono">SEGURANÇA</span><h3>Autorização além da interface</h3><p>Spring Security protege rotas e sessão, enquanto os serviços validam acesso a chamado, tarefa e anexo. Arquivos ficam fora dos assets públicos, com nome aleatório, checksum e caminho normalizado.</p></div></article>
+          <article class="decision-item fade-up"><div class="decision-icon"><i class="fas fa-database"></i></div><div><span class="mono">EVOLUÇÃO</span><h3>Banco versionado como parte da aplicação</h3><p>As migrations registram a evolução do esquema, incluindo integridade referencial, índices, SLA, portal público, quadros de projeto e preferências.</p></div></article>
+          <article class="decision-item fade-up"><div class="decision-icon"><i class="fas fa-box"></i></div><div><span class="mono">ENTREGA</span><h3>Implantação também é produto</h3><p>Docker Compose, Apache, volumes, health checks, scripts de backup e diagnóstico e um instalador NSIS reduzem etapas manuais no ambiente Windows.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dados">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// dados</span>
+          <h2 class="sh-title head">Modelo relacional com histórico</h2>
+          <p class="sh-desc">O desenho mostra o núcleo. Catálogos e configurações foram omitidos para manter a leitura.</p>
+        </div>
+        <figure class="case-visual fade-up"><img src="assets/central-servicos/modelo-dados.svg" alt="Modelo de dados simplificado com usuários, chamados, tarefas, apontamentos, comentários e anexos"><figcaption>Diagrama conceitual criado a partir das entidades e migrations da versão 1.7.5.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="demonstracao">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// demonstração segura</span>
+          <h2 class="sh-title head">Telas compostas com dados fictícios</h2>
+          <p class="sh-desc">Sem capturas da produção, nomes reais, contatos, protocolos ou métricas operacionais.</p>
+        </div>
+        <div class="case-gallery">
+          <figure class="case-shot fade-up"><img src="assets/central-servicos/demo-dashboard.svg" alt="Dashboard fictício da Empresa Demonstração"><figcaption>Resumo operacional sem números de produção.</figcaption></figure>
+          <figure class="case-shot fade-up"><img src="assets/central-servicos/demo-chamado.svg" alt="Chamado fictício da Empresa Demonstração"><figcaption>Separação entre mensagem pública, nota interna e auditoria.</figcaption></figure>
+          <figure class="case-shot fade-up"><img src="assets/central-servicos/demo-kanban.svg" alt="Kanban fictício da Empresa Demonstração"><figcaption>Tarefas de demonstração organizadas em um quadro de projeto.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualidade">
+      <div class="container">
+        <div class="section-header">
+          <span class="sh-num mono">// qualidade</span>
+          <h2 class="sh-title head">Evidência, sem inflar resultado</h2>
+        </div>
+        <div class="evidence-grid">
+          <article class="evidence-card fade-up"><strong>Java 21</strong><span>versão de compilação</span></article>
+          <article class="evidence-card fade-up delay-1"><strong>32</strong><span>migrations Flyway</span></article>
+          <article class="evidence-card fade-up delay-2"><strong>118</strong><span>métodos de teste encontrados</span></article>
+          <article class="evidence-card fade-up delay-3"><strong>CI</strong><span>assets e Maven verify</span></article>
+        </div>
+        <div class="case-copy case-copy-split fade-up">
+          <p>Os testes cobrem regras de serviço e fluxos web com Spring Security, MockMvc e persistência. Entre os cenários estão chamados, contas, portal público, SLA, anexos, WIP, relatórios e artefatos de infraestrutura.</p>
+          <p>O número de testes é uma contagem verificável da versão analisada, não um percentual de cobertura. O pipeline padrão usa H2; o teste de integração com SQL Server existe em um fluxo separado e é um ponto de evolução.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="limites">
+      <div class="container">
+        <div class="case-two-cols">
+          <div>
+            <div class="section-header"><span class="sh-num mono">// aprendizados</span><h2 class="sh-title head">O que este projeto ensinou</h2></div>
+            <ul class="case-checklist">
+              <li>Regras protegidas no backend, não só na tela.</li>
+              <li>Concorrência tratada no banco e na aplicação.</li>
+              <li>Calendário e pausas como conceitos explícitos de SLA.</li>
+              <li>Backup, logs e diagnóstico como parte da entrega.</li>
+              <li>Documentação diferente para operação e recrutamento.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="section-header"><span class="sh-num mono">// limites honestos</span><h2 class="sh-title head">O que não afirmo</h2></div>
+            <ul class="case-checklist case-checklist-muted">
+              <li>Não é um sistema bancário ou de pagamentos.</li>
+              <li>Não há resultado de carga ou escala publicado.</li>
+              <li>Não há percentual de cobertura no pipeline atual.</li>
+              <li>Não publico ganhos sem medição formal.</li>
+              <li>Mensageria, cloud e OAuth/OIDC estão no plano de estudo.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-final">
+      <div class="container">
+        <div class="case-final-card fade-up">
+          <span class="mono">PRÓXIMA CONVERSA</span>
+          <h2 class="head">Quer discutir uma decisão do projeto?</h2>
+          <p>Posso explicar o fluxo de SLA, a estratégia de concorrência, a segurança de anexos ou como a aplicação foi empacotada para operação local.</p>
+          <div class="case-actions"><a href="contato.html" class="btn-primary">Entrar em contato <i class="fas fa-arrow-right"></i></a><a href="docs/central-servicos/entrevistas.md" class="btn-ghost">Perguntas técnicas</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">FS_</div>
+        <div class="footer-links"><a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">serviços</a><a href="contato.html">contato</a></div>
+        <div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p>
+      </div>
+    </footer>
+  </main>
+
+  <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre em contato com Felipe Santos — Software Developer. Curitiba/PR.">
+  <meta name="description" content="Contato profissional com Felipe Santos para oportunidades em backend Java/Spring, sistemas corporativos e tecnologia no setor financeiro.">
   <title>Contato · Felipe Santos</title>
+  <link rel="canonical" href="https://ofelipesantos.com.br/contato.html">
+  <meta property="og:title" content="Contato · Felipe Santos">
+  <meta property="og:description" content="Contato profissional para oportunidades em backend Java/Spring.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ofelipesantos.com.br/contato.html">
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +34,11 @@
         <span class="status-dot"></span>
         <span class="mono">disponível</span>
       </div>
-      <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
         <i class="fas fa-sun" id="icon-sun"></i>
         <i class="fas fa-moon" id="icon-moon"></i>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -43,7 +48,7 @@
   <nav class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-header">
       <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
-      <button class="close-mobile-nav" id="closeMobileNav">&times;</button>
+      <button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button>
     </div>
     <ul class="mobile-nav-menu">
       <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
@@ -60,10 +65,10 @@
       <div class="container">
         <div class="section-header">
           <span class="sh-num mono">// contato</span>
-          <h2 class="sh-title head">Vamos ter uma conversa?</h2>
+          <h1 class="sh-title head">Vamos ter uma conversa?</h1>
           <p class="sh-desc">
-            Precisa de um app Android, automação de processo ou integração SQL?<br>
-            Me manda uma mensagem — respondo em menos de 24h.
+            Para oportunidades em backend Java, sistemas corporativos ou tecnologia no setor financeiro,<br>
+            fale comigo pelo LinkedIn ou acompanhe meus projetos no GitHub.
           </p>
         </div>
 
@@ -75,21 +80,17 @@
               </div>
               <div>
                 <div class="cp-name head">Felipe Santos</div>
-                <div class="cp-role mono">Android Developer &amp; Software Developer</div>
+                <div class="cp-role mono">Backend Java / Spring</div>
               </div>
               <span class="pc-badge mono">● disponível</span>
             </div>
 
             <div class="uc-links">
-              <a href="https://wa.me/5541984084116" target="_blank" class="uc-link">
-                <span class="uc-link-icon"><i class="fab fa-whatsapp"></i></span>
-                <span class="uc-link-label mono">WhatsApp</span>
-              </a>
-              <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" class="uc-link">
+              <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" class="uc-link">
                 <span class="uc-link-icon"><i class="fab fa-linkedin-in"></i></span>
                 <span class="uc-link-label mono">LinkedIn</span>
               </a>
-              <a href="https://github.com/felipe-santos-tech" target="_blank" class="uc-link">
+              <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" class="uc-link">
                 <span class="uc-link-icon"><i class="fab fa-github"></i></span>
                 <span class="uc-link-label mono">GitHub</span>
               </a>
@@ -101,29 +102,27 @@
               <div class="form-2col">
                 <div class="form-group">
                   <label for="name">Nome completo</label>
-                  <input type="text" id="name" name="name" required placeholder=" ">
+                  <input type="text" id="name" name="name" autocomplete="name" required>
                 </div>
                 <div class="form-group">
                   <label for="email">E-mail</label>
-                  <input type="email" id="email" name="email" required placeholder=" ">
+                  <input type="email" id="email" name="email" autocomplete="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="servico">Tipo de serviço</label>
+                <label for="servico">Assunto</label>
                 <select id="servico" name="servico" required>
-                  <option value="" disabled selected></option>
-                  <option value="Site / Landing Page">🌐 Site / Landing Page</option>
-                  <option value="Desenvolvimento Android">📱 Desenvolvimento Android</option>
-                  <option value="Automação de Processos">⚙️ Automação de Processos</option>
-                  <option value="SQL / Banco de Dados">🗄️ SQL / Banco de Dados</option>
-                  <option value="Integração com ERP">🏭 Integração com ERP</option>
-                  <option value="Sistema Web">📊 Sistema Web</option>
-                  <option value="Outros">👀 Outros assuntos</option>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="Oportunidade Backend Java">Oportunidade Backend Java</option>
+                  <option value="Sistema corporativo">Sistema corporativo</option>
+                  <option value="SQL e banco de dados">SQL e banco de dados</option>
+                  <option value="Integração ou automação">Integração ou automação</option>
+                  <option value="Outro assunto">Outro assunto</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="message">Sua mensagem</label>
-                <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
               </div>
               <div class="captcha-box">
                 <div class="h-captcha" data-captcha="true"></div>
@@ -133,11 +132,9 @@
 
             <div class="uc-footer">
               <div class="uc-footer-note mono">
-                <span class="status-dot"></span> Resposta em menos de 24h
+                <span class="status-dot"></span> Formulário de contato
               </div>
-              <button type="submit" form="cform" class="submit-btn" id="submitBtn">
-                Enviar mensagem <i class="fas fa-paper-plane"></i>
-              </button>
+              <button type="submit" form="cform" class="submit-btn" id="submitBtn">Enviar mensagem <i class="fas fa-paper-plane"></i></button>
             </div>
           </div>
         </div>
@@ -151,16 +148,15 @@
           <a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">serviços</a><a href="contato.html">contato</a>
         </div>
         <div class="footer-socials">
-          <a href="https://github.com/felipe-santos-tech" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://wa.me/5541984084116" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
       </div>
     </footer>
   </main>
 
-  <button id="topBtn" class="top-btn" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+  <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="js/script.js"></script>

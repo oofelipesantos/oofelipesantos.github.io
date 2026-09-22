@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Detalhe fictício de chamado</title><desc id="desc">Tela demonstrativa sem dados reais, com Empresa Demonstração e personagens genéricos.</desc>
+  <defs><style>.h{font:700 20px Arial,sans-serif;fill:#e8f0ff}.t{font:14px Arial,sans-serif;fill:#95a7c4}.m{font:12px monospace;fill:#60a5fa}.card{fill:#111c2e;stroke:#243c60;stroke-width:2}.pill{fill:#16335f;stroke:#28558b}</style></defs>
+  <rect width="1200" height="720" rx="24" fill="#07101d"/><rect width="1200" height="70" rx="24" fill="#173d77"/><rect y="48" width="1200" height="22" fill="#173d77"/>
+  <text x="38" y="43" font-family="Arial" font-size="22" font-weight="700" fill="white">Empresa Demonstração</text><text x="930" y="42" font-family="monospace" font-size="13" fill="white">CONTEÚDO FICTÍCIO</text>
+  <text x="48" y="120" class="m">CHM-DEMO-001</text><text x="48" y="158" class="h">Falha fictícia ao gerar relatório</text>
+  <rect x="922" y="109" width="222" height="42" rx="21" class="pill"/><text x="954" y="135" class="m">EM ATENDIMENTO</text>
+  <rect x="48" y="188" width="730" height="470" rx="16" class="card"/>
+  <text x="76" y="228" class="h">Histórico da solicitação</text>
+  <line x1="105" y1="267" x2="105" y2="595" stroke="#274368" stroke-width="3"/>
+  <g><circle cx="105" cy="294" r="9" fill="#3b82f6"/><text x="136" y="287" class="m">SOLICITANTE DEMO · MENSAGEM PÚBLICA</text><text x="136" y="316" class="t">O relatório mensal não conclui a geração.</text><text x="136" y="339" class="t">Nenhum nome, contato ou documento real foi usado.</text>
+  <circle cx="105" cy="408" r="9" fill="#38bdf8"/><text x="136" y="401" class="m">TÉCNICO DEMO · RESPOSTA PÚBLICA</text><text x="136" y="430" class="t">O atendimento foi iniciado e o cenário está em análise.</text>
+  <circle cx="105" cy="507" r="9" fill="#f59e0b"/><text x="136" y="500" font-family="monospace" font-size="12" fill="#fbbf24">NOTA INTERNA · VISÍVEL SOMENTE PARA TI</text><text x="136" y="529" class="t">Revisar logs fictícios e validar o fluxo no ambiente demo.</text>
+  <circle cx="105" cy="590" r="9" fill="#22c55e"/><text x="136" y="584" class="m">AUDITORIA</text><text x="136" y="612" class="t">Alteração de responsável registrada no histórico.</text></g>
+  <rect x="806" y="188" width="338" height="226" rx="16" class="card"/><text x="832" y="228" class="h">Contexto</text>
+  <text x="832" y="269" class="m">SOLICITANTE</text><text x="832" y="292" class="t">Solicitante Demo</text><text x="832" y="332" class="m">SETOR</text><text x="832" y="355" class="t">Operações Demonstrativas</text><text x="832" y="395" class="m">RESPONSÁVEL</text><text x="832" y="418" class="t">Técnico Demo</text>
+  <rect x="806" y="438" width="338" height="220" rx="16" class="card"/><text x="832" y="478" class="h">Prazos</text><text x="832" y="519" class="m">PRIMEIRA RESPOSTA</text><text x="832" y="544" class="t">Calculada em tempo comercial</text><text x="832" y="584" class="m">RESOLUÇÃO</text><text x="832" y="609" class="t">Pausas e feriados considerados</text><text x="832" y="641" class="m">VALORES OPERACIONAIS OMITIDOS</text>
+</svg>
