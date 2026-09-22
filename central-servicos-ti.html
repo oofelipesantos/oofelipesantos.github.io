@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,39 +13,36 @@
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="projetos">
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-
   <header class="topnav">
-    <a href="index.html" class="nav-brand mono" aria-label="Página inicial">FS<span class="brand-dot">.</span></a>
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
-      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
-      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> atuação</a></li>
-      <li><a href="contato.html" class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
-    </ul>
+    <a href="index.html" class="nav-brand" aria-label="Página inicial de Felipe Santos"><span class="brand-mark mono">FS<span>.</span></span><span class="brand-copy">Felipe Santos<small>Desenvolvedor de Software</small></span></a>
+    <nav aria-label="Navegação principal"><ul class="nav-menu">
+      <li><a href="index.html" class="nav-link" data-page="home">Início</a></li>
+      <li><a href="projetos.html" class="nav-link" data-page="projetos">Projetos</a></li>
+      <li><a href="servicos.html" class="nav-link" data-page="servicos">Atuação</a></li>
+      <li><a href="contato.html" class="nav-link" data-page="contato">Contato</a></li>
+    </ul></nav>
     <div class="nav-right">
-      <div class="nav-status"><span class="status-dot"></span><span class="mono">disponível</span></div>
+      <a href="contato.html" class="nav-cta">Vamos conversar <i class="fas fa-arrow-right"></i></a>
       <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-header"><span class="nav-brand mono">FS<span class="brand-dot">.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel">
+    <div class="mobile-nav-header"><span class="brand-mark mono">FS<span>.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
     <ul class="mobile-nav-menu">
-      <li><a href="index.html" class="mobile-nav-link" data-page="home">01. início</a></li>
-      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
-      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. atuação</a></li>
-      <li><a href="contato.html" class="mobile-nav-link" data-page="contato">04. contato</a></li>
+      <li><a href="index.html" class="mobile-nav-link" data-page="home">Início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">Projetos</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Atuação</a></li>
+      <li><a href="contato.html" class="mobile-nav-link" data-page="contato">Contato</a></li>
     </ul>
-    <div class="mobile-nav-footer"><span class="status-dot"></span> disponível</div>
+    <div class="mobile-nav-footer"><span class="status-dot"></span> Aberto a oportunidades</div>
   </nav>
 
   <main class="main case-page">
@@ -54,7 +51,7 @@
         <a href="projetos.html" class="case-back mono"><i class="fas fa-arrow-left"></i> voltar para projetos</a>
         <div class="case-hero-grid">
           <div class="fade-up">
-            <div class="case-kicker mono"><span class="status-dot"></span> sistema em produção · versão 1.7.5</div>
+            <div class="case-kicker mono"><span class="status-dot"></span> versão 1.7.5 entregue · sistema em produção</div>
             <h1 class="case-title head">Central de<br><span>Serviços de TI</span></h1>
             <p class="case-lead">Uma aplicação Java/Spring para organizar chamados, tarefas, SLA e operação — do formulário inicial ao histórico auditável e à implantação no Windows.</p>
             <div class="case-actions">
@@ -73,6 +70,10 @@
         <div class="case-note fade-up"><i class="fas fa-shield-halved"></i><p>Este estudo não expõe a empresa nem dados operacionais. Todas as telas abaixo são composições fictícias com a identidade <strong>Empresa Demonstração</strong>.</p></div>
       </div>
     </section>
+
+    <nav class="case-index" aria-label="Seções do estudo de caso">
+      <div class="container"><a href="#contexto">Contexto</a><a href="#arquitetura">Arquitetura</a><a href="#decisoes">Decisões</a><a href="#dados">Dados</a><a href="#demonstracao">Demonstração</a><a href="#qualidade">Qualidade</a></div>
+    </nav>
 
     <section class="section section-alt" id="contexto">
       <div class="container case-narrow">
@@ -208,14 +209,7 @@
       </div>
     </section>
 
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-brand">FS_</div>
-        <div class="footer-links"><a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">atuação</a><a href="contato.html">contato</a></div>
-        <div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
-        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p>
-      </div>
-    </footer>
+    <footer><div class="footer-inner"><div><div class="footer-brand mono">FS.</div><p>Software corporativo com foco em Backend Java/Spring.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="servicos.html">Atuação</a><a href="contato.html">Contato</a></div><div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div><p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p></div></footer>
   </main>
 
   <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>

@@ -1,11 +1,9 @@
-/* ═══════════════════════════════
-   FELIPE SANTOS — script.js v3
-════════════════════════════════ */
+/* FELIPE SANTOS — interação e navegação */
 
 // ── THEME ──
 const html     = document.documentElement;
 const themeBtn = document.getElementById('themeToggle');
-const saved    = localStorage.getItem('fs-theme') || 'dark';
+const saved    = localStorage.getItem('fs-theme') || html.dataset.theme || 'light';
 html.setAttribute('data-theme', saved);
 themeBtn?.addEventListener('click', () => {
   const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
@@ -23,24 +21,6 @@ const topnav = document.querySelector('.topnav');
 window.addEventListener('scroll', () => {
   topnav?.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
-
-// ── CURSOR ──
-const cursor     = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-if (window.innerWidth > 640 && cursor && cursorRing) {
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
-  });
-  function animRing() {
-    rx += (mx - rx) * 0.14;
-    ry += (my - ry) * 0.14;
-    cursorRing.style.transform = `translate(${rx - 15}px, ${ry - 15}px)`;
-    requestAnimationFrame(animRing);
-  }
-  animRing();
-}
 
 // ── BACK TO TOP ──
 const topBtn = document.getElementById('topBtn');

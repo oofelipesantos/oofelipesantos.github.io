@@ -1,230 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Felipe Santos — Desenvolvedor Backend Java/Spring com experiência em sistemas corporativos, SQL Server e aplicações em produção.">
-  <title>Felipe Santos · Backend Java/Spring</title>
+  <meta name="description" content="Felipe Santos — Desenvolvedor de Software com foco em Backend Java/Spring, sistemas corporativos, SQL Server e aplicações em produção.">
+  <title>Felipe Santos · Desenvolvedor de Software</title>
   <link rel="canonical" href="https://ofelipesantos.com.br/">
-  <meta property="og:title" content="Felipe Santos · Backend Java/Spring">
-  <meta property="og:description" content="Sistemas corporativos, SQL Server e aplicações em produção.">
+  <meta property="og:title" content="Felipe Santos · Desenvolvedor de Software">
+  <meta property="og:description" content="Software corporativo, do domínio à produção, com foco em Backend Java/Spring.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ofelipesantos.com.br/">
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="home">
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-
   <header class="topnav">
-    <div class="nav-brand mono">FS<span class="brand-dot">.</span></div>
-    <ul class="nav-menu">
-      <li><a href="index.html"    class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
-      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
-      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> atuação</a></li>
-      <li><a href="contato.html"  class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
-    </ul>
+    <a href="index.html" class="nav-brand" aria-label="Página inicial de Felipe Santos">
+      <span class="brand-mark mono">FS<span>.</span></span>
+      <span class="brand-copy">Felipe Santos<small>Desenvolvedor de Software</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link" data-page="home">Início</a></li>
+        <li><a href="projetos.html" class="nav-link" data-page="projetos">Projetos</a></li>
+        <li><a href="servicos.html" class="nav-link" data-page="servicos">Atuação</a></li>
+        <li><a href="contato.html" class="nav-link" data-page="contato">Contato</a></li>
+      </ul>
+    </nav>
     <div class="nav-right">
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span class="mono">disponível</span>
-      </div>
-      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
-        <i class="fas fa-sun" id="icon-sun"></i>
-        <i class="fas fa-moon" id="icon-moon"></i>
-      </button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="contato.html" class="nav-cta">Vamos conversar <i class="fas fa-arrow-right"></i></a>
+      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-header">
-      <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
-      <button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button>
-    </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel">
+    <div class="mobile-nav-header"><span class="brand-mark mono">FS<span>.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
     <ul class="mobile-nav-menu">
-      <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
-      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
-      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. atuação</a></li>
-      <li><a href="contato.html"  class="mobile-nav-link" data-page="contato">04. contato</a></li>
+      <li><a href="index.html" class="mobile-nav-link" data-page="home">Início</a></li>
+      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">Projetos</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Atuação</a></li>
+      <li><a href="contato.html" class="mobile-nav-link" data-page="contato">Contato</a></li>
     </ul>
-    <div class="mobile-nav-footer">
-      <span class="status-dot"></span> disponível
-    </div>
+    <div class="mobile-nav-footer"><span class="status-dot"></span> Aberto a oportunidades</div>
   </nav>
+
   <main class="main">
-
-    <!-- HOME -->
-    <section id="home" class="section">
+    <section id="home" class="hero-section">
       <div class="container">
-        <div class="home-layout">
-          <div class="home-left">
-            <div class="home-eyebrow">
-              <span class="eyebrow-ping"></span>
-              <span class="mono">Backend Java / Spring · Curitiba / PR</span>
-            </div>
-            <h1 class="home-title head">
-              Backend<br>
-              <span class="title-accent">Java / Spring</span><br>
-            </h1>
-            <p class="home-desc">
-              Desenvolvo sistemas corporativos com Java, Spring e SQL Server,
-              com atenção a regras de negócio, segurança, testes e à parte menos
-              visível do trabalho: <strong>colocar a aplicação em produção e mantê-la operável</strong>.
-            </p>
-            <div class="home-chips">
-              <span class="chip"><i class="fab fa-java"></i> Java 21</span>
-              <span class="chip"><i class="fas fa-leaf"></i> Spring Boot</span>
-              <span class="chip"><i class="fas fa-database"></i> SQL Server</span>
-              <span class="chip"><i class="fab fa-docker"></i> Docker</span>
-            </div>
-            <div class="home-actions">
-              <a href="projetos.html" class="btn-primary">Ver projetos <i class="fas fa-arrow-right"></i></a>
-              <a href="contato.html" class="btn-ghost">Contato</a>
-              <a href="servicos.html" class="btn-ghost">Como posso contribuir</a>
-            </div>
-            <div class="home-socials">
-              <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+        <div class="hero-grid">
+          <div class="hero-copy fade-up">
+            <div class="availability"><span class="status-dot"></span><span>Aberto a oportunidades</span><span class="availability-place">Curitiba · PR</span></div>
+            <p class="hero-role mono">DESENVOLVEDOR DE SOFTWARE · FOCO EM BACKEND JAVA/SPRING</p>
+            <h1 class="hero-title">Software corporativo,<br><span>do domínio à produção.</span></h1>
+            <p class="hero-lead">Construo aplicações completas para problemas reais de operação. Minha maior profundidade está no backend, sem perder de vista interface, dados, segurança, testes e implantação.</p>
+            <div class="hero-actions"><a href="central-servicos-ti.html" class="btn-primary">Conhecer o projeto principal <i class="fas fa-arrow-right"></i></a><a href="contato.html" class="btn-ghost">Falar comigo</a></div>
+            <div class="hero-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a></div>
           </div>
-          <div class="home-right">
-            <div class="profile-card fade-up">
-              <div class="pc-top">
-                <div class="pc-avatar">
-                  <img src="assets/profile/profile.webp" alt="Foto de perfil">
-                </div>
-                <div class="pc-info">
-                  <div class="pc-name head">Felipe Santos</div>
-                  <div class="pc-sub mono">Backend Java / Spring</div>
-                </div>
-                <span class="pc-badge mono">● disponível</span>
-              </div>
-              <div class="pc-divider"></div>
-              <div class="pc-stats">
-                <div class="pc-stat"><span class="ps-num">Java</span><span class="ps-label mono">21</span></div>
-                <div class="pc-sep"></div>
-                <div class="pc-stat"><span class="ps-num">Em uso</span><span class="ps-label mono">produção</span></div>
-                <div class="pc-sep"></div>
-                <div class="pc-stat"><span class="ps-num">SQL</span><span class="ps-label mono">Server</span></div>
-              </div>
-              <div class="pc-divider"></div>
-              <div class="pc-status-list">
-                <div class="pc-status-item"><span class="psi-dot green"></span><span class="mono">Backend e sistemas corporativos</span></div>
-                <div class="pc-status-item"><span class="psi-dot green"></span><span class="mono">Aberto a oportunidades</span></div>
-                <div class="pc-status-item"><span class="psi-dot amber"></span><span class="mono">Interesse no setor financeiro</span></div>
-              </div>
+
+          <a href="central-servicos-ti.html" class="hero-case fade-up delay-1" aria-label="Abrir estudo de caso da Central de Serviços de TI">
+            <div class="hero-case-top"><span class="mono">ESTUDO DE CASO PRINCIPAL</span><span class="case-live"><span class="status-dot"></span> versão entregue · em produção</span></div>
+            <div class="product-frame">
+              <div class="product-frame-bar"><span></span><span></span><span></span><strong>Empresa Demonstração</strong></div>
+              <img src="assets/central-servicos/demo-dashboard.svg" alt="Dashboard fictício da Central de Serviços de TI">
             </div>
+            <div class="hero-case-content"><div><h2>Central de Serviços de TI</h2><p>Chamados, tarefas, SLA, auditoria e operação em uma aplicação Java/Spring.</p></div><i class="fas fa-arrow-up-right-from-square"></i></div>
+            <div class="hero-case-tags"><span>Java 21</span><span>Spring Boot</span><span>SQL Server</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence-strip" aria-label="Evidências do projeto principal">
+      <div class="container evidence-strip-grid">
+        <div><strong>1.7.5</strong><span>versão em produção</span></div>
+        <div><strong>32</strong><span>migrations Flyway</span></div>
+        <div><strong>118</strong><span>métodos de teste</span></div>
+        <div><strong>Java 21</strong><span>Spring Boot e SQL Server</span></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <div class="editorial-heading fade-up"><span class="section-index mono">01 / PERFIL</span><h2>Mais do que escrever endpoints: entender o fluxo inteiro.</h2></div>
+        <div class="about-layout">
+          <div class="about-copy fade-up">
+            <div class="profile-intro"><img src="assets/profile/profile.webp" alt="Felipe Santos"><div><strong>Felipe Santos</strong><span>Desenvolvedor de Software</span></div></div>
+            <p>Atuo com desenvolvimento de software e curso <strong>Engenharia de Software</strong>. Minha experiência nasceu de necessidades concretas: aplicações internas, integrações, banco de dados, automação e implantação em ambiente corporativo.</p>
+            <p>Meu principal trabalho reúne backend Java, interface web, segurança, banco relacional, testes e operação. É essa visão de ponta a ponta que levo para vagas com foco em <strong>Backend Java/Spring</strong>.</p>
+            <a href="servicos.html" class="text-link">Entender minha atuação <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="capability-list">
+            <article class="capability-row fade-up delay-1"><div class="icon-box"><i class="fas fa-diagram-project"></i></div><div><span class="mono">DOMÍNIO</span><h3>Regras que refletem a operação</h3><p>Workflow, SLA, autorizações e transações tratados no backend, não apenas na interface.</p></div></article>
+            <article class="capability-row fade-up delay-2"><div class="icon-box"><i class="fas fa-database"></i></div><div><span class="mono">DADOS</span><h3>Integridade antes da conveniência</h3><p>Modelagem relacional, migrations, índices e decisões explícitas de concorrência.</p></div></article>
+            <article class="capability-row fade-up delay-3"><div class="icon-box"><i class="fas fa-box-open"></i></div><div><span class="mono">ENTREGA</span><h3>Aplicação pronta para ser operada</h3><p>Testes, pipeline, Docker, configuração externa, backup e diagnóstico.</p></div></article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section section-alt">
+    <section id="stack" class="section section-ink">
       <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// sobre</span>
-          <h2 class="sh-title head">Um resumo sobre mim</h2>
-        </div>
-        <div class="sobre-layout">
-          <div class="sobre-text fade-up">
-            <p>Atuo com desenvolvimento de software e curso <strong>Engenharia de Software</strong>. Minha experiência nasceu de problemas reais de operação: aplicações internas, integração com banco de dados, automação e implantação em ambiente corporativo.</p>
-            <p>Meu principal estudo de caso é uma <strong>Central de Serviços de TI em Java e Spring Boot</strong> que desenvolvi e coloquei em produção. O projeto reúne workflow, SLA, controle de acesso, auditoria, testes e uma entrega reproduzível com Docker.</p>
-            <p>Busco oportunidades de backend Java, especialmente em bancos, fintechs e empresas que desenvolvem para o setor financeiro.</p>
-          </div>
-          <div class="sobre-cards">
-            <div class="about-card fade-up delay-1">
-              <div class="ac-icon">☕</div>
-              <div><h3>Backend Java</h3><p>Regras de negócio, transações, segurança e persistência com Spring Boot, JPA e SQL Server.</p></div>
-            </div>
-            <div class="about-card fade-up delay-2">
-              <div class="ac-icon">🗄️</div>
-              <div><h3>Dados e integridade</h3><p>Modelagem relacional, migrations, índices e decisões de concorrência que preservam o estado do sistema.</p></div>
-            </div>
-            <div class="about-card fade-up delay-3">
-              <div class="ac-icon">⚙️</div>
-              <div><h3>Aplicação operável</h3><p>Testes, pipeline, Docker, scripts, backup e diagnóstico pensados junto com o desenvolvimento.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STACK -->
-    <section id="stack" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// stack</span>
-          <h2 class="sh-title head">Stack técnica</h2>
-        </div>
+        <div class="editorial-heading editorial-heading-light fade-up"><span class="section-index mono">02 / STACK</span><h2>Tecnologia escolhida para sustentar o problema.</h2><p>Sem lista infinita de ferramentas: aqui estão as tecnologias que aparecem de verdade nos projetos.</p></div>
         <div class="stack-badges fade-up">
-          <div class="sb-group">
-            <span class="sb-label mono">Backend</span>
-            <div class="sb-tags">
-              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"> Java 21</span>
-              <span class="sb-tag main">Spring Boot</span>
-              <span class="sb-tag">Spring Security</span>
-              <span class="sb-tag">JPA / Hibernate</span>
-            </div>
-          </div>
-          <div class="sb-group">
-            <span class="sb-label mono">Dados</span>
-            <div class="sb-tags">
-              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server"> SQL Server</span>
-              <span class="sb-tag">Flyway</span>
-              <span class="sb-tag">T-SQL</span>
-            </div>
-          </div>
-          <div class="sb-group">
-            <span class="sb-label mono">Qualidade e operação</span>
-            <div class="sb-tags">
-              <span class="sb-tag main">JUnit / MockMvc</span>
-              <span class="sb-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"> Docker Compose</span>
-              <span class="sb-tag">GitHub Actions</span>
-            </div>
-          </div>
-          <div class="sb-group">
-            <span class="sb-label mono">Complementar</span>
-            <div class="sb-tags">
-              <span class="sb-tag main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"> Git / GitHub</span>
-              <span class="sb-tag">Thymeleaf</span>
-              <span class="sb-tag">PowerShell / NSIS</span>
-              <span class="sb-tag">Android / Delphi</span>
-            </div>
-          </div>
-        </div>
-        <div class="stack-cta fade-up">
-          <a href="projetos.html" class="btn-ghost">Ver projetos com essa stack <i class="fas fa-arrow-right"></i></a>
+          <div class="sb-group"><span class="sb-label mono">BACKEND</span><div class="sb-tags"><span class="sb-tag main">Java 21</span><span class="sb-tag main">Spring Boot</span><span class="sb-tag">Spring Security</span><span class="sb-tag">JPA / Hibernate</span></div></div>
+          <div class="sb-group"><span class="sb-label mono">DADOS</span><div class="sb-tags"><span class="sb-tag main">SQL Server</span><span class="sb-tag">Flyway</span><span class="sb-tag">T-SQL</span></div></div>
+          <div class="sb-group"><span class="sb-label mono">QUALIDADE E OPERAÇÃO</span><div class="sb-tags"><span class="sb-tag main">JUnit / MockMvc</span><span class="sb-tag">Docker Compose</span><span class="sb-tag">GitHub Actions</span><span class="sb-tag">PowerShell / NSIS</span></div></div>
+          <div class="sb-group"><span class="sb-label mono">INTERFACE E COMPLEMENTAR</span><div class="sb-tags"><span class="sb-tag">Thymeleaf</span><span class="sb-tag">HTML / CSS / JavaScript</span><span class="sb-tag">Android</span><span class="sb-tag">Delphi</span></div></div>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="container"><div class="closing-cta fade-up"><div><span class="mono">PRÓXIMO PASSO</span><h2>Procuro desafios em tecnologia onde software e operação precisam conversar.</h2></div><div class="closing-actions"><a href="projetos.html" class="btn-primary">Ver projetos</a><a href="contato.html" class="btn-ghost">Entrar em contato</a></div></div></div>
     </section>
 
     <footer>
       <div class="footer-inner">
-        <div class="footer-brand">FS_</div>
-        <div class="footer-links">
-          <a href="index.html">início</a>
-          <a href="projetos.html">projetos</a>
-          <a href="servicos.html">atuação</a>
-          <a href="contato.html">contato</a>
-        </div>
-        <div class="footer-socials">
-          <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
+        <div><div class="footer-brand mono">FS.</div><p>Software corporativo com foco em Backend Java/Spring.</p></div>
+        <div class="footer-links"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="servicos.html">Atuação</a><a href="contato.html">Contato</a></div>
+        <div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p>
       </div>
     </footer>
-
   </main>
 
   <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>

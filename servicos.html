@@ -1,163 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Como Felipe Santos pode contribuir com backend Java/Spring, SQL Server, testes, integrações e operação de sistemas corporativos.">
+  <meta name="description" content="Atuação de Felipe Santos em desenvolvimento de software, com foco em Backend Java/Spring e experiência em aplicações corporativas completas.">
   <title>Atuação · Felipe Santos</title>
   <link rel="canonical" href="https://ofelipesantos.com.br/servicos.html">
-  <meta property="og:title" content="Como posso contribuir · Felipe Santos">
-  <meta property="og:description" content="Backend Java/Spring, SQL Server, testes, integrações e operação.">
+  <meta property="og:title" content="Atuação · Felipe Santos">
+  <meta property="og:description" content="Desenvolvimento de software completo, com profundidade em Backend Java/Spring.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ofelipesantos.com.br/servicos.html">
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="servicos">
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-
   <header class="topnav">
-    <div class="nav-brand mono">FS<span class="brand-dot">.</span></div>
-    <ul class="nav-menu">
-      <li><a href="index.html"    class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
-      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
-      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> atuação</a></li>
-      <li><a href="contato.html"  class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span class="mono">disponível</span>
-      </div>
-      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
-        <i class="fas fa-sun" id="icon-sun"></i>
-        <i class="fas fa-moon" id="icon-moon"></i>
-      </button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a href="index.html" class="nav-brand" aria-label="Página inicial de Felipe Santos"><span class="brand-mark mono">FS<span>.</span></span><span class="brand-copy">Felipe Santos<small>Desenvolvedor de Software</small></span></a>
+    <nav aria-label="Navegação principal"><ul class="nav-menu"><li><a href="index.html" class="nav-link" data-page="home">Início</a></li><li><a href="projetos.html" class="nav-link" data-page="projetos">Projetos</a></li><li><a href="servicos.html" class="nav-link" data-page="servicos">Atuação</a></li><li><a href="contato.html" class="nav-link" data-page="contato">Contato</a></li></ul></nav>
+    <div class="nav-right"><a href="contato.html" class="nav-cta">Vamos conversar <i class="fas fa-arrow-right"></i></a><button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button><button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav"><span></span><span></span><span></span></button></div>
   </header>
 
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-header">
-      <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
-      <button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button>
-    </div>
-    <ul class="mobile-nav-menu">
-      <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
-      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
-      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. atuação</a></li>
-      <li><a href="contato.html"  class="mobile-nav-link" data-page="contato">04. contato</a></li>
-    </ul>
-    <div class="mobile-nav-footer">
-      <span class="status-dot"></span> disponível
-    </div>
-  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel"><div class="mobile-nav-header"><span class="brand-mark mono">FS<span>.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div><ul class="mobile-nav-menu"><li><a href="index.html" class="mobile-nav-link" data-page="home">Início</a></li><li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">Projetos</a></li><li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Atuação</a></li><li><a href="contato.html" class="mobile-nav-link" data-page="contato">Contato</a></li></ul><div class="mobile-nav-footer"><span class="status-dot"></span> Aberto a oportunidades</div></nav>
+
   <main class="main">
-    <section id="servicos" class="section">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="fade-up"><span class="section-index mono">ATUAÇÃO</span><h1>Desenvolvimento de software, com profundidade no backend.</h1></div>
+        <p class="fade-up delay-1">Consigo construir uma aplicação completa. Para posicionamento profissional, concentro minha especialidade em Java/Spring e apresento interface, dados e implantação como parte da mesma entrega.</p>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// atuação</span>
-          <h1 class="sh-title head">Como posso contribuir</h1>
-          <p class="sh-desc">Desenvolvimento backend e sistemas corporativos com atenção ao código, aos dados e à operação.</p>
+        <div class="positioning-grid">
+          <article class="position-card primary fade-up"><span class="mono">IDENTIDADE PROFISSIONAL</span><h2>Desenvolvedor de Software</h2><p>Entendo a necessidade, modelo o fluxo, construo a aplicação e preparo sua operação. Isso inclui backend, banco, interface e implantação quando o projeto exige.</p></article>
+          <article class="position-card fade-up delay-1"><span class="mono">FOCO TÉCNICO</span><h2>Backend Java / Spring</h2><p>É onde tenho maior profundidade: regras de negócio, transações, segurança, persistência, integrações e consistência dos dados.</p></article>
         </div>
 
-        <div class="srv-what-grid">
-          <div class="srv-card fade-up delay-1">
-            <div class="srv-icon">☕</div>
-            <h3 class="head">Backend Java / Spring</h3>
-            <p>Regras de negócio, persistência, segurança e integrações para aplicações corporativas.</p>
-          </div>
-          <div class="srv-card fade-up delay-2">
-            <div class="srv-icon">🔌</div>
-            <h3 class="head">APIs e integrações</h3>
-            <p>Integração entre aplicações, bancos e processos existentes com contratos e falhas bem definidos.</p>
-          </div>
-          <div class="srv-card fade-up delay-3">
-            <div class="srv-icon">🛡️</div>
-            <h3 class="head">Segurança de aplicação</h3>
-            <p>Autenticação, autorização por perfil, validação de entrada e proteção de dados e arquivos.</p>
-          </div>
-          <div class="srv-card fade-up delay-1">
-            <div class="srv-icon">🗄️</div>
-            <h3 class="head">SQL Server e dados</h3>
-            <p>Modelagem, migrations, consultas, índices e relatórios para sistemas transacionais.</p>
-          </div>
-          <div class="srv-card fade-up delay-2">
-            <div class="srv-icon">🧪</div>
-            <h3 class="head">Testes e qualidade</h3>
-            <p>Testes de regras e fluxos web, revisão de cenários críticos e automação de build.</p>
-          </div>
-          <div class="srv-card fade-up delay-3">
-            <div class="srv-icon">📦</div>
-            <h3 class="head">Implantação e operação</h3>
-            <p>Docker, configuração externa, documentação, backup e rotinas de diagnóstico.</p>
-          </div>
-        </div>
+        <div class="projects-heading fade-up"><div><span class="section-index mono">COMO POSSO CONTRIBUIR</span><h2>Responsabilidades que consigo assumir</h2></div><p>Competências demonstradas nos projetos, sem transformar cada ferramenta em um título profissional.</p></div>
 
-        <div class="srv-divider fade-up">
-          <span class="mono">forma de trabalho</span>
-        </div>
-
-        <div class="how-grid">
-          <div class="how-step fade-up delay-1">
-            <div class="how-num mono">01</div>
-            <div class="how-content">
-              <h4 class="head">Entender o contexto</h4>
-              <p>Começo pelo problema, pelos usuários envolvidos e pelas restrições técnicas e operacionais.</p>
-            </div>
-            <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
-          </div>
-          <div class="how-step fade-up delay-2">
-            <div class="how-num mono">02</div>
-            <div class="how-content">
-              <h4 class="head">Definir uma entrega</h4>
-              <p>Transformo a necessidade em escopo, regras verificáveis e uma solução compatível com o ambiente.</p>
-            </div>
-            <div class="how-arrow"><i class="fas fa-arrow-right"></i></div>
-          </div>
-          <div class="how-step fade-up delay-3">
-            <div class="how-num mono">03</div>
-            <div class="how-content">
-              <h4 class="head">Construir e validar</h4>
-              <p>Implementação, testes, documentação e preparação da aplicação para uso e manutenção.</p>
-            </div>
-            <div class="how-arrow how-arrow-hide"><i class="fas fa-arrow-right"></i></div>
-          </div>
-        </div>
-
-        <div class="srv-cta fade-up">
-          <div class="srv-cta-inner">
-            <div class="srv-cta-text">
-              <span class="status-dot"></span>
-              <span class="mono">Aberto a oportunidades em tecnologia</span>
-            </div>
-            <a href="contato.html" class="btn-primary">Vamos conversar <i class="fas fa-arrow-right"></i></a>
-          </div>
+        <div class="services-grid">
+          <article class="service-card fade-up"><div class="service-icon"><i class="fas fa-code"></i></div><span class="mono">01</span><h3>Backend Java / Spring</h3><p>Regras de negócio, serviços transacionais, validação, segurança e persistência para aplicações corporativas.</p></article>
+          <article class="service-card fade-up delay-1"><div class="service-icon"><i class="fas fa-plug"></i></div><span class="mono">02</span><h3>APIs e integrações</h3><p>Comunicação entre aplicações, bancos e processos existentes com contratos e tratamento de falhas.</p></article>
+          <article class="service-card fade-up delay-2"><div class="service-icon"><i class="fas fa-database"></i></div><span class="mono">03</span><h3>Banco de dados</h3><p>Modelagem relacional, migrations, consultas, índices e integridade em SQL Server.</p></article>
+          <article class="service-card fade-up"><div class="service-icon"><i class="fas fa-shield-halved"></i></div><span class="mono">04</span><h3>Segurança da aplicação</h3><p>Autenticação, autorização por perfil, proteção de arquivos e validação também na camada de serviço.</p></article>
+          <article class="service-card fade-up delay-1"><div class="service-icon"><i class="fas fa-display"></i></div><span class="mono">05</span><h3>Aplicações web completas</h3><p>Interfaces server-side com Thymeleaf, HTML, CSS e JavaScript conectadas ao domínio da aplicação.</p></article>
+          <article class="service-card fade-up delay-2"><div class="service-icon"><i class="fas fa-rocket"></i></div><span class="mono">06</span><h3>Qualidade e operação</h3><p>Testes, pipeline, Docker, configuração externa, documentação, backup e rotinas de diagnóstico.</p></article>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-brand">FS_</div>
-        <div class="footer-links">
-          <a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">atuação</a><a href="contato.html">contato</a>
+    <section class="section section-ink">
+      <div class="container">
+        <div class="editorial-heading editorial-heading-light fade-up"><span class="section-index mono">FORMA DE TRABALHO</span><h2>Do problema à aplicação operável.</h2></div>
+        <div class="process-list">
+          <article class="process-row fade-up"><span class="process-number mono">01</span><h3>Entender o contexto</h3><p>Usuários, fluxo atual, restrições técnicas e o que precisa permanecer verdadeiro durante o processo.</p></article>
+          <article class="process-row fade-up delay-1"><span class="process-number mono">02</span><h3>Modelar a solução</h3><p>Escopo, entidades, estados, permissões, integrações e critérios que tornam a entrega verificável.</p></article>
+          <article class="process-row fade-up delay-2"><span class="process-number mono">03</span><h3>Construir e validar</h3><p>Implementação incremental, testes, revisão de cenários críticos e documentação das decisões.</p></article>
+          <article class="process-row fade-up delay-3"><span class="process-number mono">04</span><h3>Preparar a operação</h3><p>Configuração, implantação, observabilidade disponível, backup e caminhos para diagnóstico.</p></article>
         </div>
-        <div class="footer-socials">
-          <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
       </div>
-    </footer>
+    </section>
+
+    <section class="section"><div class="container"><div class="closing-cta fade-up"><div><span class="mono">POSICIONAMENTO</span><h2>Amplo o suficiente para entregar software. Focado o suficiente para aprofundar no backend.</h2></div><div class="closing-actions"><a href="projetos.html" class="btn-primary">Ver evidências</a><a href="contato.html" class="btn-ghost">Entrar em contato</a></div></div></div></section>
+
+    <footer><div class="footer-inner"><div><div class="footer-brand mono">FS.</div><p>Software corporativo com foco em Backend Java/Spring.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="servicos.html">Atuação</a><a href="contato.html">Contato</a></div><div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div><p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p></div></footer>
   </main>
 
   <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>

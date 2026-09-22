@@ -1,6 +1,15 @@
 const contactForm = document.getElementById('cform');
 const contactSubmit = document.getElementById('submitBtn');
 
+function dialogTheme() {
+  const styles = getComputedStyle(document.documentElement);
+  return {
+    background: styles.getPropertyValue('--surface').trim(),
+    color: styles.getPropertyValue('--ink').trim(),
+    confirmButtonColor: styles.getPropertyValue('--accent').trim()
+  };
+}
+
 contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -10,9 +19,7 @@ contactForm?.addEventListener('submit', async (event) => {
       title: 'Captcha obrigatório',
       text: 'Confirme que você não é um robô antes de enviar.',
       icon: 'warning',
-      background: '#0e1420',
-      color: '#e8f0ff',
-      confirmButtonColor: '#3b82f6'
+      ...dialogTheme()
     });
     return;
   }
@@ -37,18 +44,14 @@ contactForm?.addEventListener('submit', async (event) => {
       title: 'Mensagem enviada',
       text: 'Obrigado pelo contato. Retornarei assim que possível.',
       icon: 'success',
-      background: '#0e1420',
-      color: '#e8f0ff',
-      confirmButtonColor: '#3b82f6'
+      ...dialogTheme()
     });
   } catch (error) {
     await Swal.fire({
       title: 'Não foi possível enviar',
       text: 'Tente novamente ou use o LinkedIn como canal alternativo.',
       icon: 'error',
-      background: '#0e1420',
-      color: '#e8f0ff',
-      confirmButtonColor: '#3b82f6'
+      ...dialogTheme()
     });
   } finally {
     contactSubmit.disabled = false;

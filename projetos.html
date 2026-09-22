@@ -1,197 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projetos de Felipe Santos com foco em backend Java/Spring, SQL Server e sistemas corporativos em produção.">
+  <meta name="description" content="Projetos de Felipe Santos: sistemas corporativos, aplicações Java, SQL Server, Android e implantação em produção.">
   <title>Projetos · Felipe Santos</title>
   <link rel="canonical" href="https://ofelipesantos.com.br/projetos.html">
   <meta property="og:title" content="Projetos · Felipe Santos">
-  <meta property="og:description" content="Projetos com foco em backend Java/Spring, SQL Server e sistemas corporativos.">
+  <meta property="og:description" content="Projetos entregues e em andamento, com destaque para uma aplicação Java/Spring em produção.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ofelipesantos.com.br/projetos.html">
   <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-page="projetos">
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
-
   <header class="topnav">
-    <div class="nav-brand mono">FS<span class="brand-dot">.</span></div>
-    <ul class="nav-menu">
-      <li><a href="index.html"    class="nav-link" data-page="home"><span class="nl-num">01.</span> início</a></li>
-      <li><a href="projetos.html" class="nav-link" data-page="projetos"><span class="nl-num">02.</span> projetos</a></li>
-      <li><a href="servicos.html" class="nav-link" data-page="servicos"><span class="nl-num">03.</span> atuação</a></li>
-      <li><a href="contato.html"  class="nav-link" data-page="contato"><span class="nl-num">04.</span> contato</a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="nav-status">
-        <span class="status-dot"></span>
-        <span class="mono">disponível</span>
-      </div>
-      <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
-        <i class="fas fa-sun" id="icon-sun"></i>
-        <i class="fas fa-moon" id="icon-moon"></i>
-      </button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <a href="index.html" class="nav-brand" aria-label="Página inicial de Felipe Santos"><span class="brand-mark mono">FS<span>.</span></span><span class="brand-copy">Felipe Santos<small>Desenvolvedor de Software</small></span></a>
+    <nav aria-label="Navegação principal"><ul class="nav-menu"><li><a href="index.html" class="nav-link" data-page="home">Início</a></li><li><a href="projetos.html" class="nav-link" data-page="projetos">Projetos</a></li><li><a href="servicos.html" class="nav-link" data-page="servicos">Atuação</a></li><li><a href="contato.html" class="nav-link" data-page="contato">Contato</a></li></ul></nav>
+    <div class="nav-right"><a href="contato.html" class="nav-cta">Vamos conversar <i class="fas fa-arrow-right"></i></a><button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button><button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav"><span></span><span></span><span></span></button></div>
   </header>
 
   <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-  <nav class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-header">
-      <span class="nav-brand mono">FS<span class="brand-dot">.</span></span>
-      <button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button>
-    </div>
-    <ul class="mobile-nav-menu">
-      <li><a href="index.html"    class="mobile-nav-link" data-page="home">01. início</a></li>
-      <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">02. projetos</a></li>
-      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">03. atuação</a></li>
-      <li><a href="contato.html"  class="mobile-nav-link" data-page="contato">04. contato</a></li>
-    </ul>
-    <div class="mobile-nav-footer">
-      <span class="status-dot"></span> disponível
-    </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegação móvel">
+    <div class="mobile-nav-header"><span class="brand-mark mono">FS<span>.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
+    <ul class="mobile-nav-menu"><li><a href="index.html" class="mobile-nav-link" data-page="home">Início</a></li><li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">Projetos</a></li><li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Atuação</a></li><li><a href="contato.html" class="mobile-nav-link" data-page="contato">Contato</a></li></ul>
+    <div class="mobile-nav-footer"><span class="status-dot"></span> Aberto a oportunidades</div>
   </nav>
+
   <main class="main">
-    <section id="projetos" class="section">
+    <section class="page-hero">
+      <div class="container page-hero-grid">
+        <div class="fade-up"><span class="section-index mono">PROJETOS</span><h1>Trabalhos que saíram do papel.</h1></div>
+        <p class="fade-up delay-1">Aplicações concluídas, um produto em evolução contínua e uma implantação de ERP em andamento. Cada item deixa claro o seu estágio atual.</p>
+      </div>
+    </section>
+
+    <section class="section projects-section">
       <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// projetos</span>
-          <h1 class="sh-title head">Projetos em destaque</h1>
-          <p class="sh-desc">Sistemas corporativos apresentados com decisões verificáveis, limites claros e dados preservados.</p>
-        </div>
-        <div class="projetos-layout">
-          <div class="proj-featured fade-up">
-            <div class="pf-badge">Projeto principal · em produção</div>
-            <div class="pf-icon">🛠️</div>
-            <h3 class="pf-title head">Central de Serviços de TI</h3>
-            <p class="pf-desc">Sistema web para chamados, tarefas, SLA e operação da equipe de TI. Inclui segurança por perfis, auditoria, anexos protegidos, migrations, testes e implantação local com Docker.</p>
-            <div class="pf-results">
-              <div class="pfr-item"><span class="pfr-n">1.7.5</span><span class="pfr-l mono">versão analisada</span></div>
-              <div class="pfr-item"><span class="pfr-n">Em uso</span><span class="pfr-l mono">produção</span></div>
+        <article class="featured-project fade-up">
+          <div class="featured-project-visual">
+            <div class="project-visual-label mono"><span>PROJETO PRINCIPAL</span><span>01</span></div>
+            <div class="product-frame large"><div class="product-frame-bar"><span></span><span></span><span></span><strong>Empresa Demonstração</strong></div><img src="assets/central-servicos/demo-dashboard.svg" alt="Dashboard fictício da Central de Serviços de TI"></div>
+          </div>
+          <div class="featured-project-copy">
+            <div class="project-status delivered"><span></span> versão 1.7.5 entregue · em produção</div>
+            <h2>Central de Serviços de TI</h2>
+            <p>Sistema web completo para chamados, tarefas, SLA e operação de uma equipe de TI. Desenvolvi o produto da regra de negócio à implantação local, com segurança, auditoria, testes e banco versionado.</p>
+            <div class="project-proof">
+              <div><strong>Java 21</strong><span>backend</span></div><div><strong>32</strong><span>migrations</span></div><div><strong>118</strong><span>testes encontrados</span></div>
             </div>
-            <div class="proj-tags">
-              <span class="ptag">Java 21</span><span class="ptag">Spring Boot</span><span class="ptag">SQL Server</span><span class="ptag">Flyway</span><span class="ptag">Docker</span>
-            </div>
-            <a href="central-servicos-ti.html" class="proj-link mono">
-              Ler estudo de caso <i class="fas fa-arrow-right"></i>
-            </a>
+            <div class="project-tags"><span>Spring Boot</span><span>SQL Server</span><span>Flyway</span><span>Docker</span></div>
+            <a href="central-servicos-ti.html" class="btn-primary">Ler o estudo de caso <i class="fas fa-arrow-right"></i></a>
           </div>
+        </article>
 
-          <div class="proj-card fade-up delay-1">
-            <div class="proj-card-icon">🦺</div>
-            <h3 class="head">Controle de EPI &amp; SESMT</h3>
-            <p>App Android para entrega e controle de EPIs conforme NR-6, com assinatura digital e rastreabilidade completa por colaborador.</p>
-            <div class="proj-metrics"><span class="pm">assinatura e rastreabilidade</span><span class="pm">NR-6</span></div>
-            <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">SQL Server</span><span class="ptag">SQLite</span></div>
-          </div>
+        <div class="projects-heading fade-up"><div><span class="section-index mono">OUTROS TRABALHOS</span><h2>Projetos e entregas</h2></div><p>Escopos diferentes, todos ligados a processos reais de negócio.</p></div>
 
-          <div class="proj-card fade-up delay-1">
-            <div class="proj-card-icon">📦</div>
-            <h3 class="head">Controle de Estoque</h3>
-            <p>Aplicativo Android para controle de estoque eficiente com função de inventário cíclico.</p>
-            <div class="proj-metrics"><span class="pm">inventário cíclico</span></div>
-            <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">SQL Server</span><span class="ptag">SQLite</span></div>
-          </div>
+        <div class="projects-grid">
+          <article class="project-card fade-up">
+            <div class="project-card-top"><div class="project-icon"><i class="fas fa-helmet-safety"></i></div><span class="project-status completed"><span></span> projeto concluído</span></div>
+            <span class="project-number mono">02</span><h3>Controle de EPI &amp; SESMT</h3><p>Aplicação Android para entrega e controle de EPIs conforme NR-6, com assinatura digital e rastreabilidade por colaborador.</p>
+            <div class="project-highlight">Assinatura e histórico de entrega</div><div class="project-tags"><span>Java</span><span>SQL Server</span><span>SQLite</span></div>
+          </article>
 
-          <div class="proj-card fade-up delay-2">
-            <div class="proj-card-icon">📊</div>
-            <h3 class="head">Elaboração de Dashboards</h3>
-            <p>Dashboards interativos para análise de dados e visualização de métricas de desempenho.</p>
-            <div class="proj-metrics"><span class="pm">análise operacional</span></div>
-            <div class="proj-tags"><span class="ptag">Java</span><span class="ptag">SQL Server</span><span class="ptag">SQLite</span></div>
-          </div>
+          <article class="project-card fade-up delay-1">
+            <div class="project-card-top"><div class="project-icon"><i class="fas fa-boxes-stacked"></i></div><span class="project-status completed"><span></span> projeto concluído</span></div>
+            <span class="project-number mono">03</span><h3>Controle de Estoque</h3><p>Aplicação Android voltada ao controle de estoque e à execução de inventário cíclico.</p>
+            <div class="project-highlight">Inventário cíclico</div><div class="project-tags"><span>Java</span><span>SQL Server</span><span>SQLite</span></div>
+          </article>
 
-          <div class="proj-card wip fade-up delay-2">
-            <div class="proj-card-icon">🏭</div>
-            <span class="wip-badge mono">🔄 em andamento</span>
-            <h3 class="head">Modernização de ERP Industrial</h3>
-            <p>Reestruturação e implantação de ERP industrial com análise AS-IS/TO-BE, governança de dados e sprints de migração.</p>
-            <div class="proj-metrics"><span class="pm muted">Jan/2026 — atual</span></div>
-            <div class="proj-tags"><span class="ptag">SQL Server</span><span class="ptag">Delphi</span></div>
-          </div>
+          <article class="project-card fade-up delay-2">
+            <div class="project-card-top"><div class="project-icon"><i class="fas fa-chart-column"></i></div><span class="project-status completed"><span></span> projeto concluído</span></div>
+            <span class="project-number mono">04</span><h3>Dashboards Operacionais</h3><p>Painéis para consolidar dados operacionais e apoiar a visualização de indicadores de desempenho.</p>
+            <div class="project-highlight">Consulta e visualização de dados</div><div class="project-tags"><span>Java</span><span>SQL Server</span><span>SQLite</span></div>
+          </article>
 
-          <div class="proj-card xp fade-up delay-3">
-            <div class="proj-card-icon">💡</div>
-            <h3 class="head">Experiência Técnica</h3>
-            <ul class="xp-list">
-              <li>Regras transacionais e tratamento de concorrência</li>
-              <li>Autorização por perfil em rotas e serviços</li>
-              <li>Modelagem, migrations e consultas em SQL Server</li>
-              <li>Testes de serviço e fluxos web com segurança ativa</li>
-              <li>Docker, scripts operacionais e implantação Windows</li>
-            </ul>
-          </div>
+          <article class="project-card fade-up delay-3">
+            <div class="project-card-top"><div class="project-icon"><i class="fas fa-industry"></i></div><span class="project-status progress"><span></span> em andamento</span></div>
+            <span class="project-number mono">05</span><h3>Implantação de ERP Industrial</h3><p>Reestruturação e implantação de ERP com análise AS-IS/TO-BE, governança de dados e sprints de migração.</p>
+            <div class="project-highlight">Implantação iniciada em jan/2026</div><div class="project-tags"><span>SQL Server</span><span>Delphi</span><span>Processos</span></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="stack" class="section section-alt">
+    <section class="section section-soft">
       <div class="container">
-        <div class="section-header">
-          <span class="sh-num mono">// stack</span>
-          <h2 class="sh-title head">Stack técnica</h2>
-          <p class="sh-desc">Tecnologias que uso nos projetos acima e no dia a dia profissional.</p>
-        </div>
-        <div class="stack-layout">
-          <div class="stack-group fade-up">
-            <div class="sg-header"><i class="fab fa-java sg-icon"></i><span class="sg-title head">Backend Java</span></div>
-            <div class="sg-items">
-              <div class="sg-item main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><div><div class="si-name">Java 21</div><div class="si-desc mono">domínio · transações · concorrência</div></div><span class="si-tag">principal</span></div>
-              <div class="sg-item main"><span class="si-emoji">🍃</span><div><div class="si-name">Spring Boot</div><div class="si-desc mono">MVC · Security · Data JPA</div></div><span class="si-tag">principal</span></div>
-              <div class="sg-item"><span class="si-emoji">🧱</span><div><div class="si-name">JPA / Hibernate</div><div class="si-desc mono">relacionamentos · locks · specifications</div></div></div>
-              <div class="sg-item"><span class="si-emoji">🖥️</span><div><div class="si-name">Thymeleaf</div><div class="si-desc mono">renderização no servidor</div></div></div>
-            </div>
-          </div>
-          <div class="stack-group fade-up delay-1">
-            <div class="sg-header"><i class="fas fa-database sg-icon"></i><span class="sg-title head">Banco de Dados</span></div>
-            <div class="sg-items">
-              <div class="sg-item main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server"><div><div class="si-name">SQL Server</div><div class="si-desc mono">T-SQL · constraints · índices</div></div><span class="si-tag">principal</span></div>
-              <div class="sg-item"><span class="si-emoji">🛫</span><div><div class="si-name">Flyway</div><div class="si-desc mono">evolução versionada do schema</div></div></div>
-              <div class="sg-item"><span class="si-emoji">🔎</span><div><div class="si-name">Consultas e relatórios</div><div class="si-desc mono">filtros · dashboards · operação</div></div></div>
-            </div>
-          </div>
-          <div class="stack-group fade-up delay-2">
-            <div class="sg-header"><i class="fas fa-vial sg-icon"></i><span class="sg-title head">Qualidade</span></div>
-            <div class="sg-items">
-              <div class="sg-item main"><span class="si-emoji">✅</span><div><div class="si-name">JUnit e MockMvc</div><div class="si-desc mono">regras · segurança · fluxos web</div></div><span class="si-tag">principal</span></div>
-              <div class="sg-item"><span class="si-emoji">🧪</span><div><div class="si-name">Mockito e H2</div><div class="si-desc mono">isolamento e persistência em teste</div></div></div>
-              <div class="sg-item"><span class="si-emoji">🔁</span><div><div class="si-name">GitHub Actions</div><div class="si-desc mono">build de assets · Maven verify</div></div></div>
-            </div>
-          </div>
-          <div class="stack-group fade-up delay-3">
-            <div class="sg-header"><i class="fas fa-gears sg-icon"></i><span class="sg-title head">Operação e entrega</span></div>
-            <div class="sg-items">
-              <div class="sg-item main"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker"><div><div class="si-name">Docker Compose</div><div class="si-desc mono">aplicação · Apache · SQL Server</div></div><span class="si-tag">principal</span></div>
-              <div class="sg-item"><span class="si-emoji">⚡</span><div><div class="si-name">PowerShell</div><div class="si-desc mono">instalação · backup · diagnóstico</div></div></div>
-              <div class="sg-item"><span class="si-emoji">📦</span><div><div class="si-name">NSIS</div><div class="si-desc mono">instalador Windows</div></div></div>
-            </div>
-          </div>
+        <div class="editorial-heading fade-up"><span class="section-index mono">O QUE ESSES PROJETOS COMPROVAM</span><h2>Amplitude para construir software; profundidade no backend.</h2></div>
+        <div class="proof-grid">
+          <div class="proof-item"><i class="fas fa-code-branch"></i><h3>Regras e consistência</h3><p>Transações, concorrência, autorização e evolução de fluxo.</p></div>
+          <div class="proof-item"><i class="fas fa-database"></i><h3>Dados relacionais</h3><p>Modelagem, consultas, migrations, constraints e índices.</p></div>
+          <div class="proof-item"><i class="fas fa-display"></i><h3>Produto completo</h3><p>Backend, interface web ou Android e experiência de uso.</p></div>
+          <div class="proof-item"><i class="fas fa-rocket"></i><h3>Entrega e operação</h3><p>Testes, empacotamento, implantação e diagnóstico.</p></div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-brand">FS_</div>
-        <div class="footer-links">
-          <a href="index.html">início</a><a href="projetos.html">projetos</a><a href="servicos.html">atuação</a><a href="contato.html">contato</a>
-        </div>
-        <div class="footer-socials">
-          <a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR · Todos os direitos reservados</p>
-      </div>
-    </footer>
+    <section class="section"><div class="container"><div class="closing-cta fade-up"><div><span class="mono">PROJETO PRINCIPAL</span><h2>Quer entender as decisões por trás da Central de Serviços?</h2></div><div class="closing-actions"><a href="central-servicos-ti.html" class="btn-primary">Abrir estudo de caso</a><a href="contato.html" class="btn-ghost">Conversar</a></div></div></div></section>
+
+    <footer><div class="footer-inner"><div><div class="footer-brand mono">FS.</div><p>Software corporativo com foco em Backend Java/Spring.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="servicos.html">Atuação</a><a href="contato.html">Contato</a></div><div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div><p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p></div></footer>
   </main>
 
   <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
