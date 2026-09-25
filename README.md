@@ -11,10 +11,6 @@ O principal estudo de caso é a **Central de Serviços de TI**, uma aplicação 
 - [Estudo de caso](docs/central-servicos/estudo-de-caso.md)
 - [Arquitetura](docs/central-servicos/arquitetura.md)
 - [Modelo de dados](docs/central-servicos/modelo-de-dados.md)
-- [Material para currículo e LinkedIn](docs/central-servicos/curriculo-linkedin.md)
-- [Perguntas para entrevistas](docs/central-servicos/entrevistas.md)
-- [Competências e próximos estudos](docs/central-servicos/competencias-e-estudos.md)
-- [Estratégia para o setor financeiro](docs/central-servicos/estrategia-setor-financeiro.md)
 
 ## Tecnologias em destaque
 

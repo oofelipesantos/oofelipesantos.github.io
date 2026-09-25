@@ -46,11 +46,6 @@ Isso demonstra uma base de testes relevante, mas não equivale a afirmar cobertu
 - [Problema, solução e aprendizados](estudo-de-caso.md)
 - [Arquitetura](arquitetura.md)
 - [Modelo de dados](modelo-de-dados.md)
-- [Currículo e LinkedIn](curriculo-linkedin.md)
-- [Perguntas para entrevistas](entrevistas.md)
-- [Competências e próximos estudos](competencias-e-estudos.md)
-- [Posicionamento para o setor financeiro](estrategia-setor-financeiro.md)
-- [Auditoria e plano de apresentação](auditoria-e-plano.md)
 
 ## Limite do estudo de caso
 
