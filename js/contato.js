@@ -27,6 +27,19 @@ function fillCampaignFields() {
 
 fillCampaignFields();
 
+function preselectService() {
+  const requestedService = new URLSearchParams(window.location.search).get('servico');
+  const serviceSelect = document.getElementById('servico');
+  if (!requestedService || !serviceSelect) return;
+
+  const matchingOption = Array.from(serviceSelect.options).find(
+    (option) => option.dataset.service === requestedService
+  );
+  if (matchingOption) serviceSelect.value = matchingOption.value;
+}
+
+preselectService();
+
 contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
 

@@ -1,6 +1,14 @@
 # Portfólio — Felipe Santos
 
-Site profissional para apresentação de serviços de desenvolvimento de software sob medida, integrações e automação de processos. A implementação é estática e publicada pelo GitHub Pages.
+Site profissional para apresentação de serviços de criação de sites, sistemas sob medida, integrações, automações e soluções de dados. A implementação é estática e publicada pelo GitHub Pages.
+
+## Projetos apresentados
+
+- Central de Serviços de TI — sistema web Java/Spring em produção;
+- Checklist de Veículos — aplicativo Android para vistorias em campo;
+- Entrega de EPI — aplicativo Android com assinatura e rastreabilidade;
+- Inventário — aplicativo Android para estoque e inventário cíclico;
+- Relatórios Power BI — painéis e consultas para dados operacionais.
 
 O principal estudo de caso é a **Central de Serviços de TI**, uma aplicação web em produção para abertura, acompanhamento e operação de chamados. O material público usa somente dados fictícios e descreve decisões que podem ser verificadas no código.
 
@@ -14,7 +22,7 @@ O principal estudo de caso é a **Central de Serviços de TI**, uma aplicação 
 
 ## Tecnologias em destaque
 
-Java 21, Spring Boot, Spring Security, Spring Data JPA, Hibernate, Thymeleaf, SQL Server, Flyway, Docker Compose, Apache, JUnit, MockMvc, GitHub Actions, PowerShell e NSIS.
+HTML, CSS, JavaScript, Java, Android, Spring Boot, Spring Security, Spring Data JPA, Hibernate, SQL Server, SQLite, Flyway, Docker Compose, Power BI, JUnit, MockMvc e GitHub Actions.
 
 ## Mensuração
 
