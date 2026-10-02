@@ -3,33 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Estudo de caso: Central de Serviços de TI em Java 21, Spring Boot e SQL Server, em produção e com usuários reais.">
+  <meta name="description" content="Estudo de caso de um sistema de chamados em produção, com Java 21, Spring Boot, SQL Server, SLA, segurança, testes e implantação local.">
+  <meta name="theme-color" content="#111a31">
   <title>Central de Serviços de TI · Estudo de caso</title>
   <link rel="canonical" href="https://ofelipesantos.com.br/central-servicos-ti.html">
   <meta property="og:title" content="Central de Serviços de TI · Estudo de caso">
   <meta property="og:description" content="Java 21, Spring Boot, SQL Server, segurança, SLA, testes e implantação.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ofelipesantos.com.br/central-servicos-ti.html">
-  <link rel="icon" type="image/png" href="assets/icons/favicon3.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css?v=6">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://ofelipesantos.com.br/assets/social/felipe-santos-sistemas-sob-medida.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  <link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body data-page="projetos">
   <header class="topnav">
-    <a href="index.html" class="nav-brand" aria-label="Página inicial de Felipe Santos"><span class="brand-mark mono">FS<span>.</span></span><span class="brand-copy">Felipe Santos<small>Desenvolvedor de Software</small></span></a>
+    <a href="index.html" class="nav-brand"><span class="brand-mark mono">FS<span>.</span></span><span class="brand-copy">Felipe Santos<small>Sistemas sob medida</small></span></a>
     <nav aria-label="Navegação principal"><ul class="nav-menu">
       <li><a href="index.html" class="nav-link" data-page="home">Início</a></li>
+      <li><a href="servicos.html" class="nav-link" data-page="servicos">Soluções</a></li>
       <li><a href="projetos.html" class="nav-link" data-page="projetos">Projetos</a></li>
-      <li><a href="servicos.html" class="nav-link" data-page="servicos">Atuação</a></li>
       <li><a href="contato.html" class="nav-link" data-page="contato">Contato</a></li>
     </ul></nav>
     <div class="nav-right">
-      <a href="contato.html" class="nav-cta">Vamos conversar <i class="fas fa-arrow-right"></i></a>
+      <a href="contato.html" class="nav-cta" data-track="contact_header">Avaliar meu projeto</a>
       <button type="button" class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema"><i class="fas fa-sun" id="icon-sun"></i><i class="fas fa-moon" id="icon-moon"></i></button>
-      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+      <button type="button" class="hamburger" id="hamburger" aria-label="Abrir menu" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -38,11 +40,11 @@
     <div class="mobile-nav-header"><span class="brand-mark mono">FS<span>.</span></span><button type="button" class="close-mobile-nav" id="closeMobileNav" aria-label="Fechar menu">&times;</button></div>
     <ul class="mobile-nav-menu">
       <li><a href="index.html" class="mobile-nav-link" data-page="home">Início</a></li>
+      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Soluções</a></li>
       <li><a href="projetos.html" class="mobile-nav-link" data-page="projetos">Projetos</a></li>
-      <li><a href="servicos.html" class="mobile-nav-link" data-page="servicos">Atuação</a></li>
       <li><a href="contato.html" class="mobile-nav-link" data-page="contato">Contato</a></li>
     </ul>
-    <div class="mobile-nav-footer"><span class="status-dot"></span> Aberto a oportunidades</div>
+    <div class="mobile-nav-footer">Projetos de software sob medida</div>
   </nav>
 
   <main class="main case-page">
@@ -50,7 +52,7 @@
       <div class="container">
         <a href="projetos.html" class="case-back mono"><i class="fas fa-arrow-left"></i> voltar para projetos</a>
         <div class="case-hero-grid">
-          <div class="fade-up">
+          <div>
             <div class="case-kicker mono"><span class="status-dot"></span> versão 1.7.5 entregue · sistema em produção</div>
             <h1 class="case-title head">Central de<br><span>Serviços de TI</span></h1>
             <p class="case-lead">Uma aplicação Java/Spring para organizar chamados, tarefas, SLA e operação — do formulário inicial ao histórico auditável e à implantação no Windows.</p>
@@ -59,7 +61,7 @@
               <a href="docs/central-servicos/README.md" class="btn-ghost">README técnico</a>
             </div>
           </div>
-          <aside class="case-facts fade-up delay-1">
+          <aside class="case-facts">
             <div class="case-fact"><span class="mono">papel</span><strong>desenvolvimento e implantação</strong></div>
             <div class="case-fact"><span class="mono">backend</span><strong>Java 21 · Spring Boot</strong></div>
             <div class="case-fact"><span class="mono">dados</span><strong>SQL Server · JPA · Flyway</strong></div>
@@ -202,17 +204,20 @@
       <div class="container">
         <div class="case-final-card fade-up">
           <span class="mono">CONTATO</span>
-          <h2 class="head">Vamos conversar?</h2>
-          <p>Estou aberto a oportunidades em desenvolvimento de software, principalmente com Backend Java/Spring.</p>
-          <div class="case-actions"><a href="contato.html" class="btn-primary">Entrar em contato <i class="fas fa-arrow-right"></i></a></div>
+          <h2 class="head">Seu processo pode ser o próximo projeto.</h2>
+          <p>Se a sua empresa também precisa organizar um fluxo, preservar histórico ou reduzir controles manuais, conte como o processo funciona hoje.</p>
+          <div class="case-actions"><a href="contato.html" class="btn-primary" data-track="contact_case_study">Avaliar meu projeto</a></div>
         </div>
       </div>
     </section>
 
-    <footer><div class="footer-inner"><div><div class="footer-brand mono">FS.</div><p>Software corporativo com foco em Backend Java/Spring.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="projetos.html">Projetos</a><a href="servicos.html">Atuação</a><a href="contato.html">Contato</a></div><div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div><p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p></div></footer>
+    <footer><div class="footer-inner"><div><div class="footer-brand mono">FS.</div><p>Sistemas internos, integrações e automação de processos.</p></div><div class="footer-links"><a href="index.html">Início</a><a href="servicos.html">Soluções</a><a href="projetos.html">Projetos</a><a href="contato.html">Contato</a><a href="privacidade.html">Privacidade</a><button type="button" class="footer-privacy-button" data-privacy-settings>Preferências</button></div><div class="footer-socials"><a href="https://github.com/oofelipesantos" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/oofelipesantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div><p class="footer-copy mono">© 2026 Felipe Santos · Curitiba, PR</p></div></footer>
   </main>
 
+  <div class="privacy-banner" id="privacyBanner" role="dialog" aria-labelledby="privacyTitle" aria-modal="false" hidden><div><strong id="privacyTitle">Medição com respeito à sua privacidade</strong><p>Com sua autorização, uso dados de navegação para entender quais conteúdos ajudam mais. Nenhum dado digitado no formulário é enviado às ferramentas de análise.</p><a href="privacidade.html">Ver política de privacidade</a></div><div class="privacy-actions"><button type="button" class="btn-ghost" data-consent="denied">Recusar</button><button type="button" class="btn-primary" data-consent="granted">Aceitar análise</button></div></div>
   <button type="button" id="topBtn" class="top-btn" title="Voltar ao topo" aria-label="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
-  <script src="js/script.js?v=4"></script>
+  <script src="js/analytics-config.js?v=1"></script>
+  <script src="js/analytics.js?v=1" defer></script>
+  <script src="js/script.js?v=5" defer></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 # Portfólio — Felipe Santos
 
-Portfólio profissional com foco em desenvolvimento backend Java/Spring, sistemas corporativos e SQL Server.
+Site profissional para apresentação de serviços de desenvolvimento de software sob medida, integrações e automação de processos. A implementação é estática e publicada pelo GitHub Pages.
 
 O principal estudo de caso é a **Central de Serviços de TI**, uma aplicação web em produção para abertura, acompanhamento e operação de chamados. O material público usa somente dados fictícios e descreve decisões que podem ser verificadas no código.
 
@@ -15,6 +15,10 @@ O principal estudo de caso é a **Central de Serviços de TI**, uma aplicação 
 ## Tecnologias em destaque
 
 Java 21, Spring Boot, Spring Security, Spring Data JPA, Hibernate, Thymeleaf, SQL Server, Flyway, Docker Compose, Apache, JUnit, MockMvc, GitHub Actions, PowerShell e NSIS.
+
+## Mensuração
+
+O site possui eventos preparados para Google Analytics 4 e Microsoft Clarity, carregados somente após consentimento. Os identificadores públicos devem ser informados em `js/analytics-config.js`. Enquanto eles estiverem vazios, nenhum rastreador é carregado.
 
 ## Privacidade
 

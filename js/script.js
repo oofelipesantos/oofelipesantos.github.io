@@ -3,12 +3,13 @@
 // ── THEME ──
 const html     = document.documentElement;
 const themeBtn = document.getElementById('themeToggle');
-const saved    = localStorage.getItem('fs-theme') || html.dataset.theme || 'light';
+let saved = html.dataset.theme || 'light';
+try { saved = localStorage.getItem('fs-theme') || saved; } catch (error) { /* preferência opcional */ }
 html.setAttribute('data-theme', saved);
 themeBtn?.addEventListener('click', () => {
   const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   html.setAttribute('data-theme', next);
-  localStorage.setItem('fs-theme', next);
+  try { localStorage.setItem('fs-theme', next); } catch (error) { /* preferência opcional */ }
 });
 
 // ── NAV ATIVA ──
@@ -28,15 +29,19 @@ window.addEventListener('scroll', () => topBtn?.classList.toggle('show', window.
 topBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ── REVEAL ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+}
 
 // ── MENU MOBILE ──
 const hamburger        = document.getElementById('hamburger');
@@ -52,12 +57,14 @@ function openMenu() {
   mobileNav?.classList.add('active');
   mobileNavOverlay?.classList.add('active');
   html.classList.add('menu-open');
+  hamburger?.setAttribute('aria-expanded', 'true');
 }
 function closeMenu() {
   hamburger?.classList.remove('active');
   mobileNav?.classList.remove('active');
   mobileNavOverlay?.classList.remove('active');
   html.classList.remove('menu-open');
+  hamburger?.setAttribute('aria-expanded', 'false');
 }
 
 hamburger?.addEventListener('click', openMenu);
